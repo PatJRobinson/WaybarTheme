@@ -33,7 +33,7 @@
     "tooltip": false
   },
   "clock": {
-    "timezone": "America/Mexico_City",
+    "timezone": "Europe/London",
     "format": "{:%I:%M  %d, %m}",
     "tooltip-format": "{calendar}",
     "calendar": {
@@ -56,9 +56,10 @@
     "tooltip-format": "Espacio libre: {free} / {total} ({percentage_free}%)"
   },
   "temperature": {
-    "format": "{temperatureC}°C {icon}",
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "format": "CPU {temperatureC}°C {icon}",
     "tooltip": true,
-    "tooltip-format": "Temperatura actual: {temperatureC}°C\nCrítico si > 80°C",
+    "tooltip-format": "Temperature: {temperatureC}°C\nCritical at > 80°C",
     "format-icons": [
       ""
     ]
