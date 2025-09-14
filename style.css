@@ -23,7 +23,7 @@ window#waybar.hidden {
 #temperature,
 #idle_inhibitor,
 #pulseaudio,
-#pulseaudio_slider,
+#battery,
 #network,
 #language {
   color: #161320;
@@ -138,6 +138,16 @@ window#waybar.hidden {
 #idle_inhibitor {
   background: #B5E8E0;
   padding-right: 15px;
+}
+
+#battery {
+  background: #96CDFB;
+  padding: 0 10px;
+  font-size: 15px; /* match other modules */
+}
+
+#battery .icon {
+  font-size: 0.85em; /* shrink icon to match text */
 }
 
 #pulseaudio {

@@ -21,15 +21,15 @@
   "modules-right": [
     "wlr/taskbar",
     "idle_inhibitor",
-    "pulseaudio_slider",
     "pulseaudio",
     "network",
+    "battery",
     "hyprland/language"
   ],
   /* === Modules Left === */
   "custom/archicon": {
-    "format": "",
-    "on-click": "wofi --show drun",
+    "format": "❄️",
+    "on-click": "rofi -show drun",
     "tooltip": false
   },
   "clock": {
@@ -97,11 +97,6 @@
       "deactivated": ""
     }
   },
-  "pulseaudio_slider": {
-    "format": "{volume}%",
-    "tooltip": false,
-    "on-click": "pavucontrol"
-  },
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-muted": " {format_source}",
@@ -111,6 +106,16 @@
         ""
       ]
     }
+  },
+  "battery": {
+      "bat": "BAT1",
+      "interval": 60,
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-icons": ["", "", "", "", ""]
   },
   "network": {
     "format": "{ifname}",
